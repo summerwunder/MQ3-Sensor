@@ -15,14 +15,18 @@ void Key_Init(void)
 uint8_t Key_GetNum(void)
 {
 	uint8_t KeyNum = 0;
-	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5) == 0)
+	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5) == 1)
 	{
-		while (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5) == 0);
+        Delay_ms(20);
+		while (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5) == 1);
+        Delay_ms(20);
 		KeyNum = 1;
 	}
-	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6) == 0)
+	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6) == 1)
 	{
-		while (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6) == 0);
+        Delay_ms(20);
+		while (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6) == 1);
+        Delay_ms(20);
 		KeyNum = 2;
 	}
 	

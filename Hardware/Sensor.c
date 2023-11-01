@@ -11,11 +11,11 @@ void AD_Init(void)
 	
 	GPIO_InitTypeDef GPIO_InitStructure;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_7;
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 	
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_3 , 1, ADC_SampleTime_239Cycles5);
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_7 , 1, ADC_SampleTime_239Cycles5);
 	
 	ADC_InitTypeDef ADC_InitStructure;
 	ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
